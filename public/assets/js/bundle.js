@@ -25356,59 +25356,6 @@ form label {
     font-style: italic;
 }
 
-.info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.info p {
-    margin: 10px 0;
-}
-.imc {
-    padding: 30px;
-    margin-right: 30px;
-    line-height: 1;
-}
-
-.res {
-    padding: 30px;
-    margin-left: 30px;
-    line-height: 1;
-}
-
-.peso0, .peso1, .peso2, .peso3, .peso4, .peso5, .notValid{
-    background: rgb(0, 207, 45);
-    padding: 10px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
-.peso0 {
-    background: yellow;
-}
-
-.peso2 {
-    background: yellow;
-}
-
-.peso3 {
-    background: orange;
-}
-
-.peso4 {
-    background: orangered;
-}
-
-.peso5 {
-    background: red;
-}
-
-.notValid {
-    background: rgb(255, 99, 99);
-    padding: 10px;
-}
-
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -25419,7 +25366,7 @@ form label {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
-}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/styles.css"],"names":[],"mappings":"AAEA;IACI,4DAA4D;IAC5D,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,SAAS;IACT,UAAU;IACV,kCAAkC;IAClC,gBAAgB;IAChB,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uDAAuD;IACvD,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,gBAAgB;IAChB,gBAAgB;IAChB,aAAa;IACb,mBAAmB;IACnB,kCAAkC;IAClC,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,sCAAsC;AAC1C;;AAEA;IACI,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,WAAW;AACf;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,mBAAmB;IACnB,mBAAmB;IACnB,2BAA2B;IAC3B,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,qBAAqB;IACrB,2BAA2B;AAC/B;;AAEA;IACI,+CAA+C;AACnD;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gCAAgC;IAChC,gBAAgB;IAChB,eAAe;IACf,mBAAmB;IACnB,gBAAgB;IAChB,eAAe;IACf,yBAAyB;IACzB,WAAW;IACX,cAAc;IACd,YAAY;IACZ,gBAAgB;IAChB,oBAAoB;AACxB;;AAEA;IACI,+BAA+B;IAC/B,sBAAsB;IACtB,+CAA+C;AACnD;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,cAAc;IACd,mBAAmB;IACnB,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,cAAc;AAClB;AACA;IACI,aAAa;IACb,kBAAkB;IAClB,cAAc;AAClB;;AAEA;IACI,aAAa;IACb,iBAAiB;IACjB,cAAc;AAClB;;AAEA;IACI,2BAA2B;IAC3B,aAAa;IACb,iBAAiB;IACjB,mBAAmB;AACvB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,qBAAqB;AACzB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,4BAA4B;IAC5B,aAAa;AACjB;;AAEA;IACI;QACI,UAAU;QACV,2BAA2B;IAC/B;;IAEA;QACI,UAAU;QACV,gCAAgC;IACpC;AACJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');\r\n\r\n:root {\r\n    --primary-color: linear-gradient(to right, #4b0082, #9b30ff);\r\n    --button-color: #104e81;\r\n}\r\n\r\n* {\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-size: 1.3em;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n}\r\n\r\n.bgprimary {\r\n    background: linear-gradient(to right, #4b0082, #9b30ff);\r\n    width: 100%;\r\n    height: 100vh;\r\n}\r\n\r\n.container {\r\n    max-width: 640px;\r\n    background: #fff;\r\n    padding: 20px;\r\n    border-radius: 20px;\r\n    box-shadow: 5px 5px 50px 5px black; \r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    animation: fadeInUp 0.8s ease-out both;\r\n}\r\n\r\nh1 {\r\n    text-align: center;\r\n    margin-bottom: 0;\r\n}\r\n\r\nh2 {\r\n    margin-top: 0;\r\n}\r\n\r\nform input, form label, form button {\r\n    display: block;\r\n    width: 100%;\r\n}\r\n\r\nform input {\r\n    padding: 10px;\r\n    margin-bottom: 15px;\r\n    border: 2px solid #9b30ff;\r\n    border-radius: 10px;\r\n    background: #f2f2f2;\r\n    transition: 0.3 ease-in-out;\r\n    font-size: 20px;\r\n}\r\n\r\nform input:focus {\r\n    outline: none;\r\n    border-color: #9b30ff;\r\n    box-shadow: 0 0 5px #9b30ff;\r\n}\r\n\r\nform input:hover{\r\n    box-shadow: 1px 1px 7px 1px var(--button-color);\r\n}\r\n\r\nform button {\r\n    height: 40px;\r\n    border: none;\r\n    background: var(--primary-color);\r\n    font-weight: 700;\r\n    cursor: pointer;\r\n    border-radius: 20px;\r\n    margin-top: 30px;\r\n    font-size: 15px;\r\n    text-transform: uppercase;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n    color: white;\r\n    margin-top: 30px;\r\n    transition: 0.3 ease;\r\n}\r\n\r\nform button:hover {\r\n    background: var(--button-color);\r\n    transform: scale(1.05);\r\n    box-shadow: 0 4px 15px rgba(178, 102, 255, 0.5);\r\n}\r\n\r\nform button:active {\r\n    background: var(--button-color);\r\n}\r\n\r\nform label {\r\n    font-size:22px;\r\n    margin-bottom: 10px;\r\n    font-style: italic;\r\n}\r\n\r\n.info{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.info p {\r\n    margin: 10px 0;\r\n}\r\n.imc {\r\n    padding: 30px;\r\n    margin-right: 30px;\r\n    line-height: 1;\r\n}\r\n\r\n.res {\r\n    padding: 30px;\r\n    margin-left: 30px;\r\n    line-height: 1;\r\n}\r\n\r\n.peso0, .peso1, .peso2, .peso3, .peso4, .peso5, .notValid{\r\n    background: rgb(0, 207, 45);\r\n    padding: 10px;\r\n    font-weight: bold;\r\n    border-radius: 10px;\r\n}\r\n\r\n.peso0 {\r\n    background: yellow;\r\n}\r\n\r\n.peso2 {\r\n    background: yellow;\r\n}\r\n\r\n.peso3 {\r\n    background: orange;\r\n}\r\n\r\n.peso4 {\r\n    background: orangered;\r\n}\r\n\r\n.peso5 {\r\n    background: red;\r\n}\r\n\r\n.notValid {\r\n    background: rgb(255, 99, 99);\r\n    padding: 10px;\r\n}\r\n\r\n@keyframes fadeInUp {\r\n    0% {\r\n        opacity: 0;\r\n        transform: translateY(-50%);\r\n    }\r\n\r\n    100% {\r\n        opacity: 1;\r\n        transform: translate(-50%, -50%);\r\n    }\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/styles.css"],"names":[],"mappings":"AAEA;IACI,4DAA4D;IAC5D,uBAAuB;AAC3B;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,SAAS;IACT,UAAU;IACV,kCAAkC;IAClC,gBAAgB;IAChB,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,uDAAuD;IACvD,WAAW;IACX,aAAa;AACjB;;AAEA;IACI,gBAAgB;IAChB,gBAAgB;IAChB,aAAa;IACb,mBAAmB;IACnB,kCAAkC;IAClC,kBAAkB;IAClB,QAAQ;IACR,SAAS;IACT,gCAAgC;IAChC,sCAAsC;AAC1C;;AAEA;IACI,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,cAAc;IACd,WAAW;AACf;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,yBAAyB;IACzB,mBAAmB;IACnB,mBAAmB;IACnB,2BAA2B;IAC3B,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,qBAAqB;IACrB,2BAA2B;AAC/B;;AAEA;IACI,+CAA+C;AACnD;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gCAAgC;IAChC,gBAAgB;IAChB,eAAe;IACf,mBAAmB;IACnB,gBAAgB;IAChB,eAAe;IACf,yBAAyB;IACzB,WAAW;IACX,cAAc;IACd,YAAY;IACZ,gBAAgB;IAChB,oBAAoB;AACxB;;AAEA;IACI,+BAA+B;IAC/B,sBAAsB;IACtB,+CAA+C;AACnD;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,cAAc;IACd,mBAAmB;IACnB,kBAAkB;AACtB;;AAEA;IACI;QACI,UAAU;QACV,2BAA2B;IAC/B;;IAEA;QACI,UAAU;QACV,gCAAgC;IACpC;AACJ","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');\r\n\r\n:root {\r\n    --primary-color: linear-gradient(to right, #4b0082, #9b30ff);\r\n    --button-color: #104e81;\r\n}\r\n\r\n* {\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Poppins', sans-serif;\r\n    font-size: 1.3em;\r\n    line-height: 1.5em;\r\n    overflow: hidden;\r\n}\r\n\r\n.bgprimary {\r\n    background: linear-gradient(to right, #4b0082, #9b30ff);\r\n    width: 100%;\r\n    height: 100vh;\r\n}\r\n\r\n.container {\r\n    max-width: 640px;\r\n    background: #fff;\r\n    padding: 20px;\r\n    border-radius: 20px;\r\n    box-shadow: 5px 5px 50px 5px black; \r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n    animation: fadeInUp 0.8s ease-out both;\r\n}\r\n\r\nh1 {\r\n    text-align: center;\r\n    margin-bottom: 0;\r\n}\r\n\r\nh2 {\r\n    margin-top: 0;\r\n}\r\n\r\nform input, form label, form button {\r\n    display: block;\r\n    width: 100%;\r\n}\r\n\r\nform input {\r\n    padding: 10px;\r\n    margin-bottom: 15px;\r\n    border: 2px solid #9b30ff;\r\n    border-radius: 10px;\r\n    background: #f2f2f2;\r\n    transition: 0.3 ease-in-out;\r\n    font-size: 20px;\r\n}\r\n\r\nform input:focus {\r\n    outline: none;\r\n    border-color: #9b30ff;\r\n    box-shadow: 0 0 5px #9b30ff;\r\n}\r\n\r\nform input:hover{\r\n    box-shadow: 1px 1px 7px 1px var(--button-color);\r\n}\r\n\r\nform button {\r\n    height: 40px;\r\n    border: none;\r\n    background: var(--primary-color);\r\n    font-weight: 700;\r\n    cursor: pointer;\r\n    border-radius: 20px;\r\n    margin-top: 30px;\r\n    font-size: 15px;\r\n    text-transform: uppercase;\r\n    width: 100%;\r\n    margin: 0 auto;\r\n    color: white;\r\n    margin-top: 30px;\r\n    transition: 0.3 ease;\r\n}\r\n\r\nform button:hover {\r\n    background: var(--button-color);\r\n    transform: scale(1.05);\r\n    box-shadow: 0 4px 15px rgba(178, 102, 255, 0.5);\r\n}\r\n\r\nform button:active {\r\n    background: var(--button-color);\r\n}\r\n\r\nform label {\r\n    font-size:22px;\r\n    margin-bottom: 10px;\r\n    font-style: italic;\r\n}\r\n\r\n@keyframes fadeInUp {\r\n    0% {\r\n        opacity: 0;\r\n        transform: translateY(-50%);\r\n    }\r\n\r\n    100% {\r\n        opacity: 1;\r\n        transform: translate(-50%, -50%);\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26692,7 +26639,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-alert(1);
 })();
 
 /******/ })()

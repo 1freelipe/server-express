@@ -6,5 +6,6 @@ exports.formPage = (req, res) => {
 }
 
 exports.requirePost = (req, res) => {
-    res.send('Recebi o formulário');
+    const json = JSON.stringify(req.body)
+    res.send(json);
 }
