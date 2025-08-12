@@ -1,32 +1,16 @@
 const express = require('express');
 const app = express();
+const routes = require('./routes');
+const path = require('path');
 
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => {
-    res.send('Hello world!!');
-});
+app.use(express.static(path.resolve(__dirname, 'public')));
 
-app.get('/contato', (req, res) => {
-    res.send('Obrigado por entrar em contato com a gente!');
-});
+app.set('views', path.resolve(__dirname, 'src', 'views'))
+app.set('view engine', 'ejs')
 
-app.get('/formulario', (req, res) => {
-    res.send(`<form action="/formulario" method="POST">
-        Nome: <input type='text' name='nome'></input>
-        <button>Enviar</button>
-    </form>`);
-})
-
-app.get('/testes/:idUsuarios?', (req, res) => {
-    console.log(req.params);
-    res.send('Olá mundo');
-})
-
-app.post('/formulario', (req, res) => {
-    console.log(req.body);
-    res.send('Recebi o formulário');
-})
+app.use(routes);
 
 app.listen(3000, () => {
     console.log('Acessar http://localhost:3000');
