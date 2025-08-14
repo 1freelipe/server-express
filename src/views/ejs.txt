@@ -1,0 +1,11 @@
+Controle de fluxo EJS
+<% if, for %>
+<%= Imprime sem escapar caractees %>
+<%- Imprime escapando caractes %>
+<%- include(CAMINHO/ARQUIVO) %>
+
+<% if(condicao) { %>
+    <%= Exibe alguma coisa %> 
+<% } else { %>
+    <%= Exibe alguma outra coisa %> 
+<% } %>

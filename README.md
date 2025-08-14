@@ -2,5 +2,7 @@
 
 ## 1.Pequeno servidor utilizando EXPRESS afim de aprofundar mais meus estudos
 ## 2.Webpack-boilerplate configurado para transcrições
+## 3.MongoDB para o model
+## 4.Helmet e CSRF para verificação de segurança em formulários
 
-### Express + nodemon(Evita de reiniciar o servidor manualmente toda vez que houver uma modificação.);
+### Express + nodemon(Evita de reiniciar o servidor manualmente toda vez que houver uma modificação).
