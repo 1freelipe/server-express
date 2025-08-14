@@ -22,13 +22,19 @@ const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 
 //Importando meu middleware
-const { middlewareGlobal } = require('./src/middlewares/middleware');
+const { middlewareGlobal, checkCSRFerror, csrfMiddleware } = require('./src/middlewares/middleware');
 
 // Configuração de encoded
 app.use(express.urlencoded({ extended: true }))
 
 // Criação dos arquivos estáticos
 app.use(express.static(path.resolve(__dirname, 'public')));
+
+const helmet = require('helmet');
+app.use(helmet());
+
+const csrf = require('csurf');
+
 
 // Configuração das sessions
 const sessionOptions = ({
@@ -51,8 +57,13 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'))
 app.set('view engine', 'ejs')
 
+// Utilização do CSRF
+app.use(csrf());
+
 // Criação e utilização de middlewares
 app.use(middlewareGlobal);
+app.use(checkCSRFerror);
+app.use(csrfMiddleware);
 app.use(routes);
 
 // Aguardando a conexão na base de dados, pra depois ouvir no servidor // Esperando a promise
