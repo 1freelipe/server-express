@@ -12,8 +12,11 @@
 
 <div class="bgprimary">
     <section class="container">
-        <h1>Webpack Boilerplate</h1>
+        <h1>
+            <%= globalVariable %>
+        </h1>
         <form action="/formulario" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <label>Nome:</label>
             <input type="text" name="cliente">
             <button>Submit</button>
