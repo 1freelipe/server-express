@@ -20,19 +20,21 @@
   },
   "homepage": "https://github.com/1freelipe/server-express#readme",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.17.1",
     "core-js": "^3.44.0",
     "css-loader": "^7.1.2",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^4.17.1",
+    "mongoose": "^8.17.1",
     "regenerator-runtime": "^0.14.1",
     "style-loader": "^4.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
+    "nodemon": "^1.19.4",
     "webpack": "^5.100.2",
     "webpack-cli": "^6.0.1"
   }
